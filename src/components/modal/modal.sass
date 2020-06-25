@@ -1,0 +1,49 @@
+.modal
+	&-open
+		overflow: hidden
+		
+	&__overlay
+		position: fixed
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		display: flex
+		align-items: flex-start
+		height: 100%
+		width: 100%
+		overflow: hidden
+		background-color: rgba(0, 0, 0, 0.5)
+		z-index: 10
+		align-items: center
+		justify-content: center
+		&_fadeIn
+			animation: fadeIn .3s
+		&_fadeOut
+			animation: fadeOut .3s
+
+	&__window
+		background-color: #fff
+		min-width: 300px
+		max-width: 360px
+		margin: 10px
+		width: 100%
+		z-index: 1041
+		border-radius: 9px
+		box-shadow: 0 14px 18px rgba(0,0,0, 0.1)
+	&__content
+		padding: 15px
+		position: relative
+
+
+@keyframes fadeIn 
+  0% 
+    opacity: 0
+  100% 
+    opacity: 1
+
+@keyframes fadeOut 
+  0% 
+    opacity: 1
+  100% 
+    opacity: 0
